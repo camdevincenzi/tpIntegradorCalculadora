@@ -124,14 +124,21 @@ namespace Entidades
 
         private string DecimalABinario(int valor)
         {
-            string binario = "";
-
-            while (valor > 0)
+            if (valor > 0)
             {
-                binario = valor % 2 + binario;
-                valor /= 2;
+                string binario = "";
+
+                while (valor > 0)
+                {
+                    binario = valor % 2 + binario;
+                    valor /= 2;
+                }
+                return binario;
             }
-            return binario;
+            else
+            {
+                return "Valor inválido";
+            }
         }
 
         public static Numeracion operator +(Numeracion n1, Numeracion n2)
