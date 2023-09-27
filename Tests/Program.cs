@@ -40,7 +40,7 @@ namespace Tests
             Numeracion num7 = new Numeracion(Numeracion.ESistema.Decimal, "42a");
             Numeracion num8 = new Numeracion(Numeracion.ESistema.Binario, "10w00");
             Operacion multiplicacion = new Operacion(num7, num8);
-            Numeracion resultado4 = multiplicacion.Operar('-');
+            Numeracion resultado4 = multiplicacion.Operar('*');
             Console.WriteLine(resultado4.ConvertirA(Numeracion.ESistema.Decimal));
             Console.WriteLine(resultado4.ConvertirA(Numeracion.ESistema.Binario));
         }
