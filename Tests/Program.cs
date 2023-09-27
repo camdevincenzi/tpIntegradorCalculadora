@@ -6,35 +6,43 @@ namespace Tests
     {
         static void Main(string[] args)
         {
-            Numeracion numero1 = new Numeracion(Numeracion.ESistema.Decimal, "200");
-            Numeracion numero2 = new Numeracion(Numeracion.ESistema.Decimal, "1010");
-            Numeracion numero3 = new Numeracion(Numeracion.ESistema.Binario, "1001");
+            // test 1 suma normal, retorna resultado en decimal y binario
+            Numeracion num1 = new Numeracion(Numeracion.ESistema.Decimal, "200");
+            Numeracion num2 = new Numeracion(Numeracion.ESistema.Binario, "1000");
+            Operacion suma = new Operacion(num1, num2);
+            Numeracion resultado1 = suma.Operar('+');
+            Console.WriteLine(resultado1.ConvertirA(Numeracion.ESistema.Decimal));
+            Console.WriteLine(resultado1.ConvertirA(Numeracion.ESistema.Binario));
 
-            Console.WriteLine("------ Suma -------");
-            Operacion suma = new Operacion(numero1, numero3);
-            Numeracion resultadoSuma = suma.Operar('+');
+            Console.WriteLine("--------------");
 
-            string resultadoSumaDecimal = resultadoSuma.ConvertirA(Numeracion.ESistema.Decimal);
-            string resultadoSumaBinario = resultadoSuma.ConvertirA(Numeracion.ESistema.Binario);
+            // test 2, resta normal que da como resultado un número positivo
+            Numeracion num3 = new Numeracion(Numeracion.ESistema.Decimal, "150");
+            Numeracion num4 = new Numeracion(Numeracion.ESistema.Binario, "1010");
+            Operacion resta1 = new Operacion(num3, num4);
+            Numeracion resultado2 = resta1.Operar('-');
+            Console.WriteLine(resultado2.ConvertirA(Numeracion.ESistema.Decimal));
+            Console.WriteLine(resultado2.ConvertirA(Numeracion.ESistema.Binario));
 
-            Console.WriteLine($"resultado en sistema decimal: {resultadoSumaDecimal}");
-            Console.WriteLine($"resultado en sistema binario: {resultadoSumaBinario}");
+            Console.WriteLine("--------------");
 
-            Console.WriteLine("------ Resta -------");
-            Operacion resta = new Operacion(numero1, numero3);
-            Operacion resta2 = new Operacion(numero3, numero1);
-            Numeracion resultadoResta = resta.Operar('-');
-            Numeracion resultadoResta2 = resta2.Operar('-');
+            // test 3, resta que da como resultado un número negativo
+            Numeracion num5 = new Numeracion(Numeracion.ESistema.Decimal, "4");
+            Numeracion num6 = new Numeracion(Numeracion.ESistema.Binario, "1110");
+            Operacion resta2 = new Operacion(num5, num6);
+            Numeracion resultado3 = resta2.Operar('-');
+            Console.WriteLine(resultado3.ConvertirA(Numeracion.ESistema.Decimal));
+            Console.WriteLine(resultado3.ConvertirA(Numeracion.ESistema.Binario));
 
-            string resultadoRestaDecimal = resultadoResta.ConvertirA(Numeracion.ESistema.Decimal);
-            string resultadoRestaBinario = resultadoResta.ConvertirA(Numeracion.ESistema.Binario);
-            string resultadoRestaDecimal2 = resultadoResta2.ConvertirA(Numeracion.ESistema.Decimal);
-            string resultadoRestaBinario2 = resultadoResta2.ConvertirA(Numeracion.ESistema.Binario);
+            Console.WriteLine("--------------");
 
-            Console.WriteLine($"resultado en sistema decimal: {resultadoRestaDecimal}");
-            Console.WriteLine($"resultado en sistema binario: {resultadoRestaBinario}");
-            Console.WriteLine($"resultado en sistema decimal: {resultadoRestaDecimal2}");
-            Console.WriteLine($"resultado en sistema binario: {resultadoRestaBinario2}");
+            // test 4, se ingresan letras
+            Numeracion num7 = new Numeracion(Numeracion.ESistema.Decimal, "42a");
+            Numeracion num8 = new Numeracion(Numeracion.ESistema.Binario, "10w00");
+            Operacion multiplicacion = new Operacion(num7, num8);
+            Numeracion resultado4 = multiplicacion.Operar('-');
+            Console.WriteLine(resultado4.ConvertirA(Numeracion.ESistema.Decimal));
+            Console.WriteLine(resultado4.ConvertirA(Numeracion.ESistema.Binario));
         }
     }
 }

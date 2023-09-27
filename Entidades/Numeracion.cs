@@ -82,39 +82,39 @@ namespace Entidades
 
         private double BinarioADecimal(string valor)
         {
-            char[] cadena = valor.ToCharArray();
-            Array.Reverse(cadena);
-            double suma = 0;
-
-            for (int i = 0; i < cadena.Length; i++)
+            if (!EsBinario(valor))
             {
-                if (cadena[i] == '1')
-                {
-                    suma += (int)Math.Pow(2, i);
-                }
+                return 0;
             }
-            return suma;
+            else
+            {
+                char[] cadena = valor.ToCharArray();
+                Array.Reverse(cadena);
+                double suma = 0;
+
+                for (int i = 0; i < cadena.Length; i++)
+                {
+                    if (cadena[i] == '1')
+                    {
+                        suma += (int)Math.Pow(2, i);
+                    }
+                }
+                return suma;
+            }
         }
 
         private string DecimalABinario(string valor)
         {
-            if (int.TryParse(valor, out int entero)) 
+            if (int.TryParse(valor, out int entero) && entero > 0) 
             { 
-                if (entero > 0)
-                {
-                    string binario = "";
+                string binario = "";
 
-                    while (entero > 0)
-                    {
-                        binario = entero % 2 + binario;
-                        entero /= 2;
-                    }
-                    return binario;
-                }
-                else
+                while (entero > 0)
                 {
-                    return "Valor inválido";
+                    binario = entero % 2 + binario;
+                    entero /= 2;
                 }
+                return binario;
             }
             else
             {
