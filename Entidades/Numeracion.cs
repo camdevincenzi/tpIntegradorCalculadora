@@ -45,7 +45,7 @@ namespace Entidades
             {
                 this.valorNumerico = BinarioADecimal(valor);
             }
-            else if (sistema == ESistema.Decimal && double.TryParse(valor, out double valorAux))
+            else if (double.TryParse(valor, out double valorAux))
             {
                 this.valorNumerico = valorAux;
             }

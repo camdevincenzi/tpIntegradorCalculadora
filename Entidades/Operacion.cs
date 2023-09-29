@@ -57,7 +57,14 @@ namespace Entidades
                 case '*':
                     return this.primerOperando * this.segundoOperando;
                 case '/':
+                    if (this.segundoOperando.Valor != "0")
+                    {
                     return this.primerOperando / this.segundoOperando;
+                    }
+                    else
+                    {
+                        throw new ArgumentException("No es posible dividir por 0");
+                    }
                 default:
                     return this.primerOperando + this.segundoOperando;
             }
