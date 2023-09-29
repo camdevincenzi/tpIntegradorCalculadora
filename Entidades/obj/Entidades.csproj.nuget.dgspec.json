@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camila\\Desktop\\Progra-Labo II\\Proyectos\\MiCalculadora\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\Camila\\tpIntegradorCalculadora\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camila\\Desktop\\Progra-Labo II\\Proyectos\\MiCalculadora\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\Camila\\tpIntegradorCalculadora\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camila\\Desktop\\Progra-Labo II\\Proyectos\\MiCalculadora\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Camila\\tpIntegradorCalculadora\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\Camila\\Desktop\\Progra-Labo II\\Proyectos\\MiCalculadora\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\Camila\\tpIntegradorCalculadora\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\Camila\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camila\\Desktop\\Progra-Labo II\\Proyectos\\MiCalculadora\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\Camila\\tpIntegradorCalculadora\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Camila\\AppData\\Roaming\\NuGet\\NuGet.Config",

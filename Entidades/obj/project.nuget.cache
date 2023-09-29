@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hzBDgwnZ+gi0+Q9xj3ue1QASobKedMuqLF94qiD48wiazPeKZqrulJapHRl/g+bmwbleKV9WPKYlqmGe0WIcOA==",
+  "dgSpecHash": "btqrkBiXpPJPaAQW66IOp81fzaITSJR7fkpu8roeaD5RcNevSbFxReDKSmcKVGSPr+DqUm+ZyQy4W3PX7RR5jw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Camila\\Desktop\\Progra-Labo II\\Proyectos\\MiCalculadora\\Entidades\\Entidades.csproj",
+  "projectFilePath": "C:\\Users\\Camila\\tpIntegradorCalculadora\\Entidades\\Entidades.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

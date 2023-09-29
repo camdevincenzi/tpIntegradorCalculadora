@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lCy8c2z0N5WJNTXVo37q+/J+zs1oj/l79AKPl8xfh1NoEVALVVLu1CzNNG7edCJgy1ZaHXKNToKTH/FdawuauQ==",
+  "dgSpecHash": "E9mL+kyklPzjAeRW4SEu3WmZLnA0iYHA01vclndVhT6mRzbmzLBlNCpEU4SPLNkdf8xSmqlUNLwQJu+wrhWalg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Camila\\Desktop\\Progra-Labo II\\Proyectos\\MiCalculadora\\Tests\\Tests.csproj",
+  "projectFilePath": "C:\\Users\\Camila\\tpIntegradorCalculadora\\Tests\\Tests.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -143,50 +143,22 @@ namespace Entidades
 
         public static Numeracion operator +(Numeracion n1, Numeracion n2)
         {
-            if (n1 == n2)
-            {
-                return new Numeracion(n1.Sistema, n1.valorNumerico + n2.valorNumerico);
-            }
-            else
-            {
-                throw new InvalidOperationException("La operación se puede hacer sólo si las numeraciones pertenecen al mismo sistema");
-            }
+            return new Numeracion(n1.Sistema, n1.valorNumerico + n2.valorNumerico);
         }
 
         public static Numeracion operator -(Numeracion n1, Numeracion n2)
         {
-            if (n1 == n2)
-            {
-                return new Numeracion(n1.Sistema, n1.valorNumerico - n2.valorNumerico);
-            }
-            else
-            {
-                throw new InvalidOperationException("La operación se puede hacer sólo si las numeraciones pertenecen al mismo sistema");
-            }
+            return new Numeracion(n1.Sistema, n1.valorNumerico - n2.valorNumerico);
         }
 
         public static Numeracion operator *(Numeracion n1, Numeracion n2)
         {
-            if (n1 == n2)
-            {
-                return new Numeracion(n1.Sistema, n1.valorNumerico * n2.valorNumerico);
-            }
-            else
-            {
-                throw new InvalidOperationException("La operación se puede hacer sólo si las numeraciones pertenecen al mismo sistema");
-            }
+            return new Numeracion(n1.Sistema, n1.valorNumerico * n2.valorNumerico);
         }
 
         public static Numeracion operator /(Numeracion n1, Numeracion n2)
         {
-            if (n1 == n2)
-            {
-                return new Numeracion(n1.Sistema, n1.valorNumerico / n2.valorNumerico);
-            }
-            else
-            {
-                throw new InvalidOperationException("La operación se puede hacer sólo si las numeraciones pertenecen al mismo sistema");
-            }
+            return new Numeracion(n1.Sistema, n1.valorNumerico / n2.valorNumerico);
         }
 
         public static bool operator ==(ESistema sistema, Numeracion numeracion)

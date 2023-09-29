@@ -43,6 +43,11 @@ namespace Entidades
 
         public Numeracion Operar(char operador)
         {
+            if (this.primerOperando != this.segundoOperando)
+            {
+                throw new InvalidOperationException("No es posible operar si las numeraciones tienen diferente sistema");
+            }
+
             switch (operador)
             {
                 case '+':
