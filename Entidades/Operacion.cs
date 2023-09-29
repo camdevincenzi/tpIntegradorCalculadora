@@ -59,7 +59,7 @@ namespace Entidades
                 case '/':
                     if (this.segundoOperando.Valor != "0")
                     {
-                    return this.primerOperando / this.segundoOperando;
+                        return this.primerOperando / this.segundoOperando;
                     }
                     else
                     {
