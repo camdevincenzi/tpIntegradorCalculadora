@@ -16,7 +16,7 @@ namespace Tests
 
             Console.WriteLine("------------------");
 
-            // test 2, operacion entre dos numeracines con distinto sistema
+            // test 2, operacion entre dos numeraciones con distinto sistema
             Numeracion num3 = new Numeracion(Numeracion.ESistema.Decimal, "1234");
             Numeracion num4 = new Numeracion(Numeracion.ESistema.Binario, "1000");
             Operacion multiplicacion = new Operacion(num3, num4);
