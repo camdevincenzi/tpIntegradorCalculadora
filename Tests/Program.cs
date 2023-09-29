@@ -36,7 +36,7 @@ namespace Tests
 
             Console.WriteLine("------------------");
 
-            // test 4, suma entre dos binarios
+            // test 4, resta que da como valor un número negativo
             Numeracion num7 = new Numeracion(Numeracion.ESistema.Decimal, "232");
             Numeracion num8 = new Numeracion(Numeracion.ESistema.Decimal, "500");
             Operacion resta = new Operacion(num7, num8);
