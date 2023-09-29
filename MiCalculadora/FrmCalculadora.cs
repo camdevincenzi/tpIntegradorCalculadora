@@ -60,8 +60,11 @@ namespace MiCalculadora
 
         private void rdbBinario_CheckedChanged(object sender, EventArgs e)
         {
-            this.sistema = ESistema.Binario;
-            setResultado(this.resultado);
+            if (this.resultado is not null)
+            {
+                this.sistema = ESistema.Binario;
+                setResultado(this.resultado);
+            }
         }
 
         private void lblPrimerOperador_Click(object sender, EventArgs e)

@@ -6,7 +6,7 @@ namespace Tests
     {
         static void Main(string[] args)
         {
-            // test 1 suma normal, retorna resultado en decimal y binario
+            // test 1 suma entre un decimal y un binario
             Numeracion num1 = new Numeracion(Numeracion.ESistema.Decimal, "200");
             Numeracion num2 = new Numeracion(Numeracion.ESistema.Binario, "1000");
             Operacion suma = new Operacion(num1, num2);
@@ -16,9 +16,9 @@ namespace Tests
 
             Console.WriteLine("--------------");
 
-            // test 2, resta normal que da como resultado un número positivo
+            // test 2, resta entre dos decimales
             Numeracion num3 = new Numeracion(Numeracion.ESistema.Decimal, "150");
-            Numeracion num4 = new Numeracion(Numeracion.ESistema.Binario, "1010");
+            Numeracion num4 = new Numeracion(Numeracion.ESistema.Decimal, "1010");
             Operacion resta1 = new Operacion(num3, num4);
             Numeracion resultado2 = resta1.Operar('-');
             Console.WriteLine(resultado2.ConvertirA(Numeracion.ESistema.Decimal));

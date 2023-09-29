@@ -30,9 +30,8 @@ namespace Entidades
         }
 
         public Numeracion(ESistema sistema, double valor)
+            :this(sistema, valor.ToString())
         {
-            this.valorNumerico = valor;
-            this.sistema = sistema;
         }
 
         public Numeracion(ESistema sistema, string valor)
@@ -54,6 +53,7 @@ namespace Entidades
             {
                 this.valorNumerico = double.MinValue;
             }
+            this.sistema = sistema;
         }
 
         public string ConvertirA(ESistema sistema)
@@ -143,22 +143,50 @@ namespace Entidades
 
         public static Numeracion operator +(Numeracion n1, Numeracion n2)
         {
-            return new Numeracion(n1.Sistema, n1.valorNumerico + n2.valorNumerico);
+            if (n1 == n2)
+            {
+                return new Numeracion(n1.Sistema, n1.valorNumerico + n2.valorNumerico);
+            }
+            else
+            {
+                throw new InvalidOperationException("La operación se puede hacer sólo si las numeraciones pertenecen al mismo sistema");
+            }
         }
 
         public static Numeracion operator -(Numeracion n1, Numeracion n2)
         {
-            return new Numeracion(n1.Sistema, n1.valorNumerico - n2.valorNumerico);
+            if (n1 == n2)
+            {
+                return new Numeracion(n1.Sistema, n1.valorNumerico - n2.valorNumerico);
+            }
+            else
+            {
+                throw new InvalidOperationException("La operación se puede hacer sólo si las numeraciones pertenecen al mismo sistema");
+            }
         }
 
         public static Numeracion operator *(Numeracion n1, Numeracion n2)
         {
-            return new Numeracion(n1.Sistema, n1.valorNumerico * n2.valorNumerico);
+            if (n1 == n2)
+            {
+                return new Numeracion(n1.Sistema, n1.valorNumerico * n2.valorNumerico);
+            }
+            else
+            {
+                throw new InvalidOperationException("La operación se puede hacer sólo si las numeraciones pertenecen al mismo sistema");
+            }
         }
 
         public static Numeracion operator /(Numeracion n1, Numeracion n2)
         {
-            return new Numeracion(n1.Sistema, n1.valorNumerico / n2.valorNumerico);
+            if (n1 == n2)
+            {
+                return new Numeracion(n1.Sistema, n1.valorNumerico / n2.valorNumerico);
+            }
+            else
+            {
+                throw new InvalidOperationException("La operación se puede hacer sólo si las numeraciones pertenecen al mismo sistema");
+            }
         }
 
         public static bool operator ==(ESistema sistema, Numeracion numeracion)
